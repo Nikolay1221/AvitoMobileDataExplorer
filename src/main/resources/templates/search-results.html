@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <title>Результаты поиска</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Добавлена библиотека Chart.js -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider round"></span>
+  </label>
+
+  <form id="search-form" action="/search" method="post" class="mt-3">
+    <div class="input-group">
+      <input type="text" name="searchText" class="form-control" placeholder="Введите модель телефона" autocomplete="off">
+      <div class="input-group-append">
+        <button type="submit" class="btn btn-primary">Анализировать цену</button>
+      </div>
+    </div>
+  </form>
+
+  <div id="search-suggestions">
+    <!-- Результаты быстрого поиска будут отображаться здесь -->
+  </div>
+  <div id="price-analysis" class="price-tile">
+    <!-- Результаты анализа цен будут отображаться здесь -->
+  </div>
+  <div id="analyzed-results">
+    <!-- Здесь будут отображаться результаты анализа -->
+  </div>
+
+  <canvas id="price-chart"></canvas>
+  <div id="search-results" class="mt-4">
+    <!-- Результаты поиска будут отображаться здесь -->
+  </div>
+</div>
+
+<script src="/search-suggestions.js"></script>
+<script src="/search.js"></script>
+<script src="/recommendations-behavior.js"></script>
+<script src="/theme-toggle.js"></script>
+</body>
+</html>
