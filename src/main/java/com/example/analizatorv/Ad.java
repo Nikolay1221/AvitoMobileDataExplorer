@@ -3,7 +3,7 @@ package com.example.analizatorv;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "smartphone_pricing_all3")
+@Document(collection = "avito_collection")
 public class Ad {
     @Id
     private String id;
